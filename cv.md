@@ -66,6 +66,7 @@ January 2023 - Present
 - Tools and technologies: Git, Docker  
 - Databases: PostgreSQL, MySQL, MongoDB  
 - Software development methods: Agile, Scrum  
+- OS: Windows , Ubuntu , CentOS , Linux Mint and other  
 
 ## Projects 
 
