@@ -134,7 +134,7 @@ screen.onkeypress(snake_go_right, "Right")
 
 while True:
     screen.update()
-    if snake.distance(fruit) < 20:
+    if snake.distance(fruit)  &lt; 20:
         x = random.randint(-290, 270)
         y = random.randint(-240, 240)
         fruit.goto(x, y)
@@ -160,7 +160,7 @@ while True:
 
     snake_move()
 
-    if snake.xcor() > 280 or snake.xcor() < -300 or snake.ycor() > 240 or snake.ycor() < -240:
+    if snake.xcor() > 280 or snake.xcor()  &lt; -300 or snake.ycor() > 240 or snake.ycor()  &lt; -240:
         time.sleep(1)
         screen.clear()
         screen.bgcolor("turquoise")
@@ -168,7 +168,7 @@ while True:
         scoring.write("GAME OVER \nВаш Счет {}", format(score), align="center", font=("Courier", 30, "bold"))
 
     for part in tail:
-        if part.distance(snake) < 20:
+        if part.distance(snake)  &lt; 20:
             time.sleep(1)
             screen.clear()
             screen.bgcolor("turquoise")
