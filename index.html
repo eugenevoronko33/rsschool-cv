@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV#2. HTML, CSS & Git Basics</title>
+</head>
+<body>
+    <h1>CV for RSSchool</h1>
+    
+    <h2>Eugene Voronko - Beginner Webmaster</h2>
+    <img src="https://stihi.ru/photos/3redstar3.jpg?8169" alt="Profile image">
+
+    <h1>Contacts</h1>
+    <p><strong>Email:</strong> eugene.voronko.33@gmail.com</p>
+    <p><strong>Phone:</strong> +375 33 6892753</p>
+    <p><strong>Address:</strong> city Grodno, Belarus</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/eugene-voronko-8806001aa/">https://www.linkedin.com/in/eugene-voronko-8806001aa/</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/eugenevoronko33">https://github.com/eugenevoronko33</a></p>
+
+    <hr>
+
+    <h2>Education</h2>
+    <p><strong>Yanka Kupala Grodno State University</strong>, Grodno, Belarus</p>
+    <p><em>Master of Computer Science</em></p>
+    <p>September 2020 - January 2022</p>
+
+    <p><strong>Yanka Kupala Grodno State University</strong>, Grodno, Belarus</p>
+    <p><em>Bachelor's Degree in Information Technology Software</em></p>
+    <p>September 2016 - June 2020</p>
+
+    <hr>
+
+    <h2>Work experience</h2>
+    <p><strong>LLC "instinctools"</strong>, Grodno, Belarus</p>
+    <p><em>Beginner web developer</em></p>
+    <p>December 2018 - March 2019</p>
+    <ul>
+        <li>Development and support of web applications using JavaScript, SQL, NoSQL</li>
+        <li>Implementing a micro-service architecture for scalable solutions</li>
+    </ul>
+
+    <p><strong>CHUP "Айтишник"</strong>, Grodno, Belarus</p>
+    <p><em>System Administrator</em></p>
+    <p>October 2023 - Present</p>
+    <ul>
+        <li>Support and configuration of network and office equipment</li>
+        <li>Training of novice administrators</li>
+        <li>Conducting equipment testing</li>
+    </ul>
+
+    <p><strong>CHUP "Айтишник"</strong>, Grodno, Belarus</p>
+    <p><em>Consultant</em></p>
+    <p>October 2022 - October 2023</p>
+    <ul>
+        <li>Teaching IT technology to students</li>
+        <li>Advising beginners in choosing a direction</li>
+    </ul>
+
+    <p><strong>Yanka Kupala Grodno State University</strong>, Grodno, Belarus</p>
+    <p><em>Teacher</em></p>
+    <p>January 2023 - Present</p>
+    <ul>
+        <li>Training of students in the field of information systems administration</li>
+        <li>Develop your own training plan in the field of administration</li>
+    </ul>
+
+    <hr>
+
+    <h2>Skills</h2>
+    <ul>
+        <li>Programming languages: Python, JavaScript, SQL, PHP, C#, Kotlin, Android Java</li>
+        <li>Web technologies: HTML, CSS, React, Angular, NodeJS</li>
+        <li>Tools and technologies: Git, Docker</li>
+        <li>Databases: PostgreSQL, MySQL, MongoDB</li>
+        <li>Software development methods: Agile, Scrum</li>
+        <li>OS: Windows, Ubuntu, CentOS, Linux Mint and other</li>
+    </ul>
+
+    <h2>Projects</h2>
+    <p><strong>Personal page game group</strong></p>
+    <p><em>Description:</em> Development of a personal page for a gaming group</p>
+    <p><em>Role:</em> Developer</p>
+    <p><em>Technology:</em> HTML, CSS, JavaScript, MongoDB, React</p>
+
+    <p><strong>Messenger</strong></p>
+    <p><em>Description:</em> Creating a mobile application to communicate with friends</p>
+    <p><em>Role:</em> Developer</p>
+    <p><em>Technology:</em> Kotlin, Firebase, Android</p>
+
+    <hr>
+
+    <h2>Code example</h2>
+    <pre>
+        <code>
+def snake_move():
+    if snake.direction == "up":
+        y = snake.ycor()
+        snake.sety(y + 20)
+
+    if snake.direction == "down":
+        y = snake.ycor()
+        snake.sety(y - 20)
+
+    if snake.direction == "left":
+        x = snake.xcor()
+        snake.setx(x - 20)
+
+    if snake.direction == "right":
+        x = snake.xcor()
+        snake.setx(x + 20)
+
+def snake_go_down():
+    if snake.direction != "up":
+        snake.direction = "down"
+
+def snake_go_up():
+    if snake.direction != "down":
+        snake.direction = "up"
+
+def snake_go_right():
+    if snake.direction != "left":
+        snake.direction = "right"
+
+def snake_go_left():
+    if snake.direction != "right":
+        snake.direction = "left"
+
+screen.listen()
+screen.onkeypress(snake_go_down, "Down")
+screen.onkeypress(snake_go_up, "Up")
+screen.onkeypress(snake_go_left, "Left")
+screen.onkeypress(snake_go_right, "Right")
+
+while True:
+    screen.update()
+    if snake.distance(fruit) < 20:
+        x = random.randint(-290, 270)
+        y = random.randint(-240, 240)
+        fruit.goto(x, y)
+        scoring.clear()
+        score += 1
+        scoring.write("Счет:{}", format(score), align="center", font=("Courier", 24, "bold"))
+        delay -= 0.001
+        new_fruit = turtle.Turtle()
+        new_fruit.speed(0)
+        new_fruit.shape('square')
+        new_fruit.color("red")
+        new_fruit.penup()
+        tail.append(new_fruit)
+
+    for index in range(len(tail) - 1, 0, -1):
+        a = tail[index - 1].xcor()
+        b = tail[index - 1].ycor()
+        tail[index].goto(a, b)
+    if len(tail) > 0:
+        a = snake.xcor()
+        b = snake.ycor()
+        tail[0].goto(a, b)
+
+    snake_move()
+
+    if snake.xcor() > 280 or snake.xcor() < -300 or snake.ycor() > 240 or snake.ycor() < -240:
+        time.sleep(1)
+        screen.clear()
+        screen.bgcolor("turquoise")
+        scoring.goto(0, 0)
+        scoring.write("GAME OVER \nВаш Счет {}", format(score), align="center", font=("Courier", 30, "bold"))
+
+    for part in tail:
+        if part.distance(snake) < 20:
+            time.sleep(1)
+            screen.clear()
+            screen.bgcolor("turquoise")
+            scoring.goto(0, 0)
+            scoring.write("GAME OVER \nВаш Счет {}", format(score), align="center", font=("Courier", 30, "bold"))
+
+    time.sleep(delay)
+        </code>
+    </pre>
+
+    <h2>Languages</h2>
+    <ul>
+        <li>Russian (native)</li>
+        <li>English (advanced - reading)</li>
+    </ul>
+
+    <hr>
+
+    <h2>Personal qualities</h2>
+    <ul>
+        <li>Excellent communication skills</li>
+        <li>Ability to work in a team and independently</li>
+        <li>High adaptability to changes</li>
+    </ul>
+
+    <hr>
+
+    <h2>Interests</h2>
+    <ul>
+        <li>Artificial intelligence and machine learning</li>
+        <li>Open-source projects</li>
+        <li>Reading science fiction</li>
+        <li>Cars</li>
+        <li>Operating systems</li>
+        <li>Implementation of microservices</li>
+    </ul>
+
+    <img src="img/rs_school_js.svg" width="200" height="200">
+</body>
+</html>

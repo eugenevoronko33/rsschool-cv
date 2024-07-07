@@ -1,1 +1,1 @@
-[eugenevoronko33](https://github.com/eugenevoronko33/rsschool-cv/blob/gh-pages/cv.md)
+[eugenevoronko33](https://eugenevoronko33.github.io/rsschool-cv/)
