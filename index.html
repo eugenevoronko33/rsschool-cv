@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV#2. HTML, CSS  Git Basics</title>
+    <title>CV#2. HTML, CSS Git Basics</title>
 </head>
 <body>
     <h1>CV for RSSchool</h1>
@@ -133,7 +133,7 @@ screen.onkeypress(snake_go_right, "Right")
 
 while True:
     screen.update()
-    if snake.distance(fruit)  &lt; 20:
+    if snake.distance(fruit) &lt; 20:
         x = random.randint(-290, 270)
         y = random.randint(-240, 240)
         fruit.goto(x, y)
@@ -167,7 +167,7 @@ while True:
         scoring.write("GAME OVER \nВаш Счет {}", format(score), align="center", font=("Courier", 30, "bold"))
 
     for part in tail:
-        if part.distance(snake)  &lt; 20:
+        if part.distance(snake) &lt; 20:
             time.sleep(1)
             screen.clear()
             screen.bgcolor("turquoise")
